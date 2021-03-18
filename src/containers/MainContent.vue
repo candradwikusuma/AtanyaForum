@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div>
-      <!-- <BannerMain></BannerMain> -->
-    </div>
+    <!-- <BannerMain></BannerMain> -->
+    <Carousel></Carousel>
     <div class="px-2 pt-3">
       <v-card
         class=" mb-3 rounded"
@@ -41,14 +40,16 @@
 </template>
 <script>
 // import BannerMain from "../components/BannerMain";
+import Carousel from "../components/Carousel";
 
 export default {
-  // components: { BannerMain },
+  components: {
+    // BannerMain,
+    Carousel,
+  },
   data: () => ({
     name: "Main",
-    components: {
-      // BannerMain,
-    },
+
     itemPertanyaan: [
       {
         judul: "Apakah Kamus bisa membuat mejadi pintar bahaasa?",

@@ -1,16 +1,29 @@
 <template>
   <div>
-    <div class="px-3 pt-2 pb-3">
-      <v-row>
-        <v-col md="6" v-for="(banner, i) in itemBanner" :key="i">
+    <div class="d-flex justify-space-between">
+      <span class="headline mt-5 ml-5 font-weight-bold" outlined tile>
+        Event
+      </span>
+      <v-btn class="mt-6  " elevation="0" text small>
+        See all event <v-icon>mdi-chevron-right</v-icon>
+      </v-btn>
+    </div>
+    <div>
+      <v-slide-group
+        v-model="model"
+        class="pt-1 px-2 mb-5"
+        active-class="success"
+      >
+        <v-slide-item v-for="(banner, i) in itemBanner" :key="i" class="flex">
+          <!-- <v-card class="ma-1" height="100" width="250"> </v-card> -->
           <v-card
-            elevation="5"
-            class="mx-auto "
-            :aspect-ratio="16 / 6"
+            elevation="2"
+            class="mx-2 justify-space-around"
+            :aspect-ratio="16 / 9"
             :width="width"
           >
             <v-img
-              class="white--text align-end bottom-gradient "
+              class="white--text align-end bottom-gradient  "
               height="200px"
               :src="banner.picture"
               :lazy-src="banner.lazy"
@@ -26,7 +39,7 @@
                 <v-card-title
                   max
                   class="d-inline-block subtitle-1 text-justify text-truncate"
-                  style="max-width: 120px;"
+                  style="max-width: 220px;"
                   >{{ banner.judul }}</v-card-title
                 >
                 <v-card-subtitle class="white--text caption"
@@ -35,16 +48,16 @@
               </div>
             </v-img>
           </v-card>
-        </v-col>
-      </v-row>
+        </v-slide-item>
+      </v-slide-group>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "BannerMain",
   data: () => ({
-    width: 125,
+    model: null,
+    width: 220,
     itemBanner: [
       {
         judul: "Lomba matematika tingkat nasional",
@@ -57,17 +70,12 @@ export default {
         picture: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
         author: "dwi",
       },
-      //   {
-      //     judul: "Banner 3",
-      //     picture: "https://cdn.vuetifyjs.com/images/cards/road.jpg",
-      //     author: "kusuma",
-      //   },
+      {
+        judul: "Banner 3",
+        picture: "https://cdn.vuetifyjs.com/images/cards/road.jpg",
+        author: "kusuma",
+      },
     ],
   }),
 };
 </script>
-<style scoped>
-.bottom-gradient {
-  background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, transparent 100%);
-}
-</style>

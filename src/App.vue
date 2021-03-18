@@ -1,22 +1,24 @@
 <template>
   <v-app>
     <NavigationBar></NavigationBar>
-    <!-- <MainBar></MainBar> -->
+
     <SidebarLeft></SidebarLeft>
 
     <v-content class="secondary">
       <v-row no-gutters>
-        <v-col class="d-flex d-sm-none" sm="12">
-          <MainBar></MainBar>
-        </v-col>
-        <v-col md="9" sm="12">
+        <!-- <v-col class="d-flex d-md-none" fixed app>
+         
+        </v-col> -->
+        <v-col lg="9" md="12" sm="12">
           <MainContent></MainContent>
         </v-col>
-        <v-col md="3" class="d-none d-sm-flex">
+
+        <v-col lg="3" md="0" class="d-none d-lg-flex">
           <SidebarRight></SidebarRight>
         </v-col>
       </v-row>
     </v-content>
+    <NavigatioBarOption class="d-flex d-md-none"></NavigatioBarOption>
   </v-app>
 </template>
 
@@ -25,7 +27,7 @@ import NavigationBar from "./containers/NavigationBar";
 import SidebarLeft from "./containers/SidebarLeft";
 import SidebarRight from "./containers/SidebarRight";
 import MainContent from "./containers/MainContent.vue";
-import MainBar from "./components/MainBar.vue";
+import NavigatioBarOption from "./components/NavigationBarOption.vue";
 export default {
   name: "App",
   data: () => ({}),
@@ -34,7 +36,7 @@ export default {
     SidebarLeft,
     SidebarRight,
     MainContent,
-    MainBar,
+    NavigatioBarOption,
   },
 };
 </script>

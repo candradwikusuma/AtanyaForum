@@ -6,10 +6,14 @@ import colors from "vuetify/lib/util/colors";
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  breakpoint: {
+    mobileBreakpoint: "sm", // This is equivalent to a value of 960
+  },
+
   theme: {
     themes: {
       light: {
-        primary: colors.grey.lighten5, // #E53935
+        primary: "#FFFFFF",
         secondary: colors.blueGrey.lighten5, // #FFCDD2
         accent: "#0091EA",
       },

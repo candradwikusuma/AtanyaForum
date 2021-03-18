@@ -23,7 +23,7 @@
 
           <v-text-field
             solo
-            label="Cari Tag nya dong"
+            label="Cari disini dong"
             clearable
             dense
             flat
@@ -142,9 +142,8 @@
               </v-list-item-content>
             </v-card>
           </v-menu>
-          <MainBar></MainBar>
         </v-app-bar>
-        <v-card></v-card>
+
         <v-navigation-drawer v-model="drawer" absolute temporary>
           <v-list nav dense>
             <v-list-item-group
@@ -192,10 +191,11 @@
 </template>
 
 <script>
+//import NavigatioBarOption from "../components/NavigationBarOption.vue";
 export default {
-  // components: {
-  //   MainBar,
-  // },
+  components: {
+    //NavigatioBarOption,
+  },
   data: () => ({
     drawer: false,
     group: null,

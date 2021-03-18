@@ -1,6 +1,6 @@
 <template>
-  <v-navigation-drawer floating clipped app>
-    <v-card flat class="rounded-lg ">
+  <v-navigation-drawer floating clipped app class="secondary">
+    <v-card flat class=" secondary mt-1">
       <v-list nav dense>
         <v-list-item-group v-model="selectedItem" color="accent">
           <v-list-item v-for="(item, i) in menuItems" :key="i">

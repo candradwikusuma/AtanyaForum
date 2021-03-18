@@ -1,6 +1,6 @@
 <template>
-  <div class="pr-3 ">
-    <v-card class="ml-2 " outlined max-width="360">
+  <div class="pr-3 pt-12 ">
+    <v-card outlined max-width>
       <v-card-text>
         <div>Word of the Day</div>
         <p class="display-1 text--primary">
